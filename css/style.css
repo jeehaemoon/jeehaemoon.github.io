@@ -44,7 +44,7 @@ nav {
     color: #FFF685;
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width: 768px){
 
     .line {
         width: 30px;
@@ -63,6 +63,7 @@ nav {
         right:5%;
         top:50%;
         transform:translate(-5%,-50%);
+        z-index: 2;
     }
     .nav-links{
         position: fixed;
@@ -70,7 +71,17 @@ nav {
         height: 100vh;
         width: 100%;
         flex-direction: column;
-        clip-path:circle(100px) ;
+        clip-path:circle(100px at 90% -10%);
+        -webkit-clip-path:circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
 
     }
+    .nav-links.open{
+
+        clip-path:circle(1700px at 90% -10%);
+        -webkit-clip-path:circle(1700px at 90% -10%);
+        pointer-events: all;
+    }
 }
+
