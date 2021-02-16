@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir = "ltr">
+<head>
+    <meta charset="utf-8">
+    <script src="main.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css"></link>
+
+    <title>Drawing Pad</title>
+</head>
+
+<body>
+<div id="container">
+    <canvas id="canvas">This text is displayed if your browser does not support HTML5 Canvas.</canvas>
+    <button onclick="canvastool('draw');" id="draw"></button>
+    <button onclick="canvastool('erase');" id="erase"></button>
+    <button onclick="canvastool('blue');" id="blue"></button>
+    <button onclick="canvastool('red');" id="red"></button>
+    <button onclick="canvastool('yellow');" id="yellow"></button>
+    <button onclick="canvastool('green');" id="green"></button>
+
+    <button onclick="linetool('thic');" id="thic"></button>
+    <button onclick="linetool('thin');" id="thin"></button>
+
+    <button onclick="linetool('clear');" id="clear"></button>
+
+    <button id="save" type="button"></button>
+
+
+
+</div>
+
+</body>
+</html>
