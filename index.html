@@ -4,32 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link href="favicon.ico" rel="shortcut icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap" rel="stylesheet">   
     <title>Jeehae Moon</title>
 </head>
 <body>
-    <nav>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+    <div class="container">
+        <nav>
+            <div class="hamburger" onclick="myFunction(this)">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
 
-        <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contacts</a></li>
-            <li><a href="#">Projects</a></li>
+            <ul class="nav-links" >
+                <li><a href="#About">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+            <div class = "namelogo">
+                <img class="logo" src="images/LogoMakr-4cF3mJ.png">
+            </div>
 
-        </ul>
-    </nav>
+        </nav>
 
-    <section class="landing">
-        <h1>Dots</h1>
-    </section>
+        <section id="About">
+            <h1>Hi! I'm Jeehae, Web Developer.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, ipsa! Alias ipsa cum rerum! Quisquam.</p>
+        </section>
+        <section id="Projects">
+            <h1>My Portfolio</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, ipsa! Alias ipsa cum rerum! Quisquam.</p>
+        </section>
+        <section id="Contact">
+            <h1>Get in touch with me!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, ipsa! Alias ipsa cum rerum! Quisquam.</p>
+        </section>
 
-    <script src="main.js" charset="utf-8"></script>
+        <script src="js/main.js" charset="utf-8"></script>
 
+    </div>  
 </body>
 
 
