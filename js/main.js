@@ -4,15 +4,18 @@ const links = document.querySelectorAll('.nav-links li');
 
 
 hamburger.addEventListener('click',() => {
-    
       navLinks.classList.toggle("open");
-
 })
 
 function myFunction(x) {
-    x.classList.toggle("change");
-  }
+  x.classList.toggle("change");
+}
+
+function mysecondFunction(x) {
+  x.classList.toggle("open");
+}
+
 
 navLinks.addEventListener('click', () => {
-  navLinks.classList.toggle("open");
+  hamburger.classList.toggle("change");
 })
