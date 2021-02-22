@@ -1,28 +1,127 @@
 * {
     margin:0;
     padding: 0;
-    box-sizing: border-box;
-}
+} 
 
-.container {
-    width: 100%;
-    height:100%;
-    overflow-y: scroll;
+html{
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory; 
 }
 body {
     font-family: 'Rubik', sans-serif;
-    height: 100vh;
-    overflow: hidden;
-
 }
-nav {
+
+main{
+    width:100%;
+    height:100%;
+}
+
+.fa {
+    position: absolute;
+    font-size: 1rem;
+    width: 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    bottom: -90%;
+}
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-linkedin {
+    background: none;
+    color: black;
+    display: flex;
+    left: 20%;
+  }
+  .fa-github {
+    background: none;
+    color: black;
+    display: flex;
+    left: 15%;
+
+  }
+
+  
+.scroll-down{
+    position: absolute;
+    bottom: 2rem;
+    transform: translate(-50%);
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouse{
+    width: 1rem;
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin-bottom: 0.1rem;
+    display: flex;
+}
+
+.mouse span{
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: black;
+    display: block;
+    border-radius: 50%;
+    margin:auto;
+    animation: move-wheel 2s linear infinite;
+}
+.container {
     display: flex;
     background:none;
     position: fixed;
     width: 100%;
     height: 60px;
+    
+}
+.arrow span{
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 1px solid transparent;
+    border-right-color: black;
+    border-bottom-color: black;
+    transform: rotate(45deg);
+    animation: arrow-down 2s alternate infinite;
+
+}
+@keyframes move-wheel{
+    0%{
+        opacity: 0;
+        transform: translateY(-0.5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0.5rem);
+    }
+}
+
+@keyframes arrow-down{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        overflow: 1;
+    }
 }
 
 .nav-links{
@@ -40,7 +139,7 @@ nav {
 .nav-links li a{
     color: white ;
     text-decoration:none;
-    font-size: 40px;
+    font-size: 30px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     font-weight: 800;
@@ -50,9 +149,12 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: aquamarine;
+    color: #73ebd2;
 }
 
+nav .container ul li.active a{
+    color: #73ebd2;
+}
 
 .namelogo{
     position:absolute;
@@ -62,39 +164,163 @@ nav {
     align-items: center;
     left:2%;
     top:0;
-    
-
 }
+
 .logo {
     width: 90px;
     height: 80px;
-
- 
 }
 
 section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     width: 100%;
     height: 100vh;
     scroll-snap-align: center;
 }
 section h1 {
-    font-size: 4rem;
+    font-size: 500%;
+    margin-top: 7.5%;
 }
 section p {
     font-size: 1.5rem;
 }
 
-#Projects {
-    background-color: #FFF685;
+#resume {
+    background-color: #fbef99;
+    
+}
+#about h1{
+    font-size: 500%;
+    margin-top: 20%;
+}
+
+#about h1 span:hover{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 
+                          8px 8px #fbef99,
+                          20px 20px black;
+}
+#contact {
+    text-align: center;
+    background-color:white;
+
+}
+
+.contact-form{
+    height: 100%;
+}
+textarea{
+    font-family: 'Rubik', sans-serif;
+
+}
+
+form{
+    margin-top: 5%;
+    transition: all 4s ease-in-out;
+    display: flex;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 0px;
+    width: 100%;
+
+}
+.form-control{
+    width:50%;
+    background: transparent;
+    font-size: 1rem;
+    border-width: 1px;
+    border-radius: 5px;
+}
+input{
+    height: 45px;
+}
+
+form .submit{
+    background-color: white;
+    font-weight: 800;
+    border-width: 2px;
+    margin-top: 1%;
+    width: 10%;
+    font-size: 1rem;
+    margin-left: 40%;
+   
+}
+
+form .submit:hover{
+    background-color: #fbef99;
+    cursor: pointer;
+    color: white ;
+    text-decoration:none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    
+}
+
+#status.success{
+    background-color: none;
+    color: #b9a6ef;
+    font-size: 16px;
+}
+#status.success{
+    background-color: none;
+    color: #b9a6ef;
+    font-size: 16px;
 }
 
 
+
 @media screen and (max-width: 768px){
+
+    .scroll-down{
+        display: none;
+    }
+
+    #about h1{
+        font-size: 270%;
+        margin-top: 40%;
+    }
+  
+    section h1 {
+        font-size: 270%;
+        margin-top: 25%;
+    }
+
+    section p{
+        font-size: 100%;
+    }
+    .form-control{
+        width:50%;
+        height: fit-content;
+        background: transparent;
+        font-size: 1rem;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+    form .submit{
+        background-color: white;
+        font-weight: 800;
+        border-width: 2px;
+        width: 10%;
+        font-size: 0.25rem;
+       
+    }
   
     .hamburger{
         position:absolute;
@@ -129,10 +355,11 @@ section p {
         -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
         transform: rotate(45deg) translate(-8px, -8px) ;
     }
+   
     .nav-links{
         position: fixed;
-        background-color: #FFF685;
-        height: 100vh;
+        background-color: #fbef99;
+        height: 100%;
         width: 100%;
         flex-direction: column;
         justify-content: space-around;
@@ -141,6 +368,7 @@ section p {
         transition: all 1s ease-out;
 
     }
+    
     .nav-links.open{
 
         clip-path:circle(1700px at 90% -10%);
@@ -150,7 +378,7 @@ section p {
 
     
     .nav-links:hover{
-        background-color:aquamarine;
+        background-color:#b9a6ef;
     }
     .logo {
         width: 60px;
