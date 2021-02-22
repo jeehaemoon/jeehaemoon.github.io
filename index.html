@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="/images/favicon 4.00.21 PM.ico"/>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>Jeehae Moon</title>
 </head>
 <body>
+    <nav>
     <div class="container">
-        <nav>
+        
             <div class="hamburger" onclick="myFunction(this)">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -17,33 +21,73 @@
             </div>
 
             <ul class="nav-links" onclick = "mysecondFunction(this)" >
-                <li><a href="#About">About</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li class="about"><a href="#about">About</a></li>
+                <li class="resume"><a href="#resume">Resume</a></li>
+                <li class="projects"><a href="#projects">Projects</a></li>
+                <li class="contact"><a href="#contact">Contact</a></li>
             </ul>
             
             <div class = "namelogo">
                 <img class="logo" src="images/LogoMakr-4cF3mJ.png">
             </div>
 
-        </nav>
+        
+    </div>
+    </nav>
 
-        <section id="About">
-            <h1>Hi! I'm Jeehae, Web Developer.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, ipsa! Alias ipsa cum rerum! Quisquam.</p>
+    <main>
+        <section id="about">
+            <h1>Hi! I'm <span>Jeehae</span> , Web Developer.</h1>
+            <a href="#resume" class="scroll-down">
+                <div class="mouse">
+                    <span></span>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                </div>
+            </a>
         </section>
-        <section id="Projects">
+        <section id="resume">
+            <h1>Resume</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, ipsa! Alias ipsa cum rerum! Quisquam.</p>
+            <a href="http://linkedin.com/in/jeehae-moon-584216118" class="fa fa-linkedin" target="_blank"></a>
+            <a href="https://github.com/jeehaemoon" class="fa fa-github" target="_blank"></a>
+
+
+        </section>
+        <section id="projects">
             <h1>My Portfolio</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, ipsa! Alias ipsa cum rerum! Quisquam.</p>
         </section>
-        <section id="Contact">
-            <h1>Get in touch with me!</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, ipsa! Alias ipsa cum rerum! Quisquam.</p>
+        <section id="contact">
+            <div class="contact-title">
+                <h1>Get in touch with me!</h1>
+                <br>
+                <p>Leave me a message and I'll contact you as soon as possible.</p>
+            </div>
+
+            <div class="contact-form">
+                <form id = "contact-form" method="POST" action="https://formspree.io/f/xpzoeovp">
+                    <input name="name" type="text" class="form-control" placeholder=" Your name" required>
+                     <br>
+                    <input name="email" type="email" class="form-control" placeholder=" Your email" required>
+                    <br>
+                    <textarea name="message" class="form-control" placeholder=" Your message" rows="10"></textarea>
+                    <br>
+                    <input type="submit" class="form-control submit" value="SEND">
+                </form>
+            </div>
+            <div id="status"></div>
+            
+
         </section>
+    
+    </main>
 
-        <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
 
-    </div>  
+
+   
 </body>
 
 
