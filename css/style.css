@@ -8,44 +8,13 @@ html{
     scroll-snap-type: y mandatory; 
 }
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 main{
     width:100%;
     height:100%;
 }
-
-.fa {
-    position: absolute;
-    font-size: 1rem;
-    width: 2rem;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    bottom: -90%;
-}
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-
-  .fa-linkedin {
-    background: none;
-    color: black;
-    display: flex;
-    left: 20%;
-  }
-  .fa-github {
-    background: none;
-    color: black;
-    display: flex;
-    left: 15%;
-
-  }
-
   
 .scroll-down{
     position: absolute;
@@ -140,20 +109,20 @@ main{
     color: white ;
     text-decoration:none;
     font-size: 30px;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1.25px;
     -webkit-text-stroke-color: black;
-    font-weight: 800;
+    font-weight: 900;
     margin: 0 1rem;
     padding: 0;
 
 }
 
 .nav-links li a:hover {
-    color: #73ebd2;
+    color: #8db9e4;
 }
 
 nav .container ul li.active a{
-    color: #73ebd2;
+    color: #8db9e4;
 }
 
 .namelogo{
@@ -181,44 +150,72 @@ section {
 }
 section h1 {
     font-size: 500%;
-    margin-top: 7.5%;
+    margin-top: 6%;
 }
 section p {
-    font-size: 1.5rem;
+    font-size: 100%;
 }
 
-#resume {
-    background-color: #fbef99;
-    
-}
+.social {
+    font-size: 1rem;
+    width: 2rem;
+    text-align: center;
+    margin-left: 11%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-linkedin {
+    background: none;
+    color: black;
+    text-decoration: none;
+   
+  }
+  .fa-github {
+    background: none;
+    color: black;
+    text-decoration: none;
+  }
+ 
+
+
 #about h1{
     font-size: 500%;
     margin-top: 20%;
+    text-align: center;
+}
+
+#about p{
+    margin-left: 11%;
+    text-align: left;
+
 }
 
 #about h1 span:hover{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 
-                          8px 8px #fbef99,
-                          20px 20px black;
+                          8px 8px #f3ed9b,
+                          20px 20px white;
+}
+#resume h1 {
+    font-size: 400%;
 }
 #contact {
     text-align: center;
     background-color:white;
-
 }
 
 .contact-form{
     height: 100%;
 }
 textarea{
-    font-family: 'Rubik', sans-serif;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 form{
@@ -253,7 +250,7 @@ input{
 
 form .submit{
     background-color: white;
-    font-weight: 800;
+    font-weight: 900;
     border-width: 2px;
     margin-top: 1%;
     width: 10%;
@@ -263,27 +260,15 @@ form .submit{
 }
 
 form .submit:hover{
-    background-color: #fbef99;
+    background-color: black;
     cursor: pointer;
     color: white ;
     text-decoration:none;
+    font-style: italic;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: white;
     
 }
-
-#status.success{
-    background-color: none;
-    color: #b9a6ef;
-    font-size: 16px;
-}
-#status.success{
-    background-color: none;
-    color: #b9a6ef;
-    font-size: 16px;
-}
-
-
 
 @media screen and (max-width: 768px){
 
@@ -302,7 +287,7 @@ form .submit:hover{
     }
 
     section p{
-        font-size: 100%;
+        font-size: 72%;
     }
     .form-control{
         width:50%;
@@ -320,6 +305,14 @@ form .submit:hover{
         width: 10%;
         font-size: 0.25rem;
        
+    }
+    a.success{
+        font-size: 0.25rem;
+
+    }
+    a.error{
+        font-size: 0.25rem;
+
     }
   
     .hamburger{
@@ -358,7 +351,7 @@ form .submit:hover{
    
     .nav-links{
         position: fixed;
-        background-color: #fbef99;
+        background-color: #f39677;
         height: 100%;
         width: 100%;
         flex-direction: column;
@@ -378,7 +371,7 @@ form .submit:hover{
 
     
     .nav-links:hover{
-        background-color:#b9a6ef;
+        background-color:#f3ed9b;
     }
     .logo {
         width: 60px;
