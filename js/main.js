@@ -3,6 +3,9 @@ const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.nav-links li');
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('nav .container ul li');
+const htmlSection = document.querySelector('.html');
+const cssSection = document.querySelector('.css');
+const jsSection = document.querySelector('.javascript');
 
 
 window.addEventListener('scroll',()=> {
@@ -12,11 +15,21 @@ window.addEventListener('scroll',()=> {
     const sectionHeight = section.clientHeight;
     if(pageYOffset >= (sectionTop-sectionHeight / 3)){
       current = section.getAttribute('id');
+      if(current == "resume"){
+        htmlSection.classList.add("animate");
+        cssSection.classList.add("animate");
+        jsSection.classList.add("animate");
+
+      }
+      else{
+        htmlSection.classList.remove("animate");
+        cssSection.classList.remove("animate");
+        jsSection.classList.remove("animate");
 
 
+      }
     }
   })
-
   navLi.forEach(li=> {
     li.classList.remove('active');
     if(li.classList.contains(current)){
@@ -24,8 +37,6 @@ window.addEventListener('scroll',()=> {
     }
   })
 })
-
-
 hamburger.addEventListener('click',() => {
   navLinks.classList.toggle("open");
 })
@@ -38,8 +49,6 @@ x.classList.toggle("change");
 function mysecondFunction(x) {
 x.classList.toggle("open");
 }
-
-
 
 navLinks.addEventListener('click', () => {
 hamburger.classList.toggle("change");
