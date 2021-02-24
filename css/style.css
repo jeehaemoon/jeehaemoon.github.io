@@ -187,6 +187,7 @@ section p {
     font-size: 500%;
     margin-top: 20%;
     text-align: center;
+ 
 }
 
 #about p{
@@ -203,8 +204,58 @@ section p {
                           8px 8px #f3ed9b,
                           20px 20px white;
 }
-#resume h1 {
-    font-size: 400%;
+.skills{
+    width: 30%;
+    margin-left: 10%;
+    text-align: left;
+    margin-top: 20%;
+    list-style: none;
+    display: block;
+}
+.skills li{
+    margin: 20px 0;
+    
+}
+.bar{
+    background-color: black;
+    display: block;
+    height: 2px;
+    border: 1px solid rgba(0,0,0,3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #f3ed9b;
+}
+.bar span{
+    height: 2px;
+    float: left;
+    background: #f3ed9b;
+}
+.html.animate{
+    width: 90%;
+    animation: baranimate 1s;
+}
+.html{
+    width: 0%;
+}
+.css{
+    width: 80%;
+}
+.css.animate{
+    width: 80%;
+    animation: baranimate 1s;
+}
+.javascript{
+    width: 70%;
+}
+.javascript.animate{
+    width: 70%;
+    animation: baranimate 1s;
+}
+@keyframes baranimate{
+    0%{
+        width: 0%;
+    }
+
 }
 #contact {
     text-align: center;
