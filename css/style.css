@@ -7,6 +7,7 @@ html{
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory; 
 }
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -15,6 +16,7 @@ main{
     width:100%;
     height:100%;
 }
+
   
 .scroll-down{
     position: absolute;
@@ -50,8 +52,7 @@ main{
     background:none;
     position: fixed;
     width: 100%;
-    height: 60px;
-    
+    height: 60px;   
 }
 .arrow span{
     display: block;
@@ -64,6 +65,54 @@ main{
     animation: arrow-down 2s alternate infinite;
 
 }
+.avatar {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 10%;
+
+}
+.avatar img{
+    width:170px;
+    height: 170px;
+}
+button {
+    text-align: center;
+    background-color: #63adf2;
+    margin-top: 5%;
+    border-radius: 2rem;
+    width: 7rem;
+    height: 2rem;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    border: transparent;
+
+}
+.experience{
+    height: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    border: 2px solid black;
+}
+.info{
+    height: 30%;
+    width: 30%;
+    margin-left: 25%;
+    margin-top: 10%;
+    position: absolute;
+    border:2px solid black;
+
+}
+
+.info h3 {
+    text-align: left;
+    
+}
+
 @keyframes move-wheel{
     0%{
         opacity: 0;
@@ -101,7 +150,8 @@ main{
     background: none;
     justify-content: flex-end;
     align-items: center;
-    margin-left: auto;
+    margin-right: 9%;
+
 
 }
 
@@ -118,11 +168,11 @@ main{
 }
 
 .nav-links li a:hover {
-    color: #8db9e4;
+    color: #63adf2;
 }
 
 nav .container ul li.active a{
-    color: #8db9e4;
+    color: #63adf2;
 }
 
 .namelogo{
@@ -131,7 +181,7 @@ nav .container ul li.active a{
     display: flex;
     justify-content:space-around;
     align-items: center;
-    left:2%;
+    left:11%;
     top:0;
 }
 
@@ -147,9 +197,13 @@ section {
     width: 100%;
     height: 100vh;
     scroll-snap-align: center;
+    z-index: 2;
 }
 section h1 {
     font-size: 500%;
+    margin-top: 6%;
+}
+section h2 {
     margin-top: 6%;
 }
 section p {
@@ -160,13 +214,14 @@ section p {
     font-size: 1rem;
     width: 2rem;
     text-align: center;
-    margin-left: 11%;
     display: flex;
     justify-content: space-between;
+    margin-left: 11%;
   }
 
   .fa:hover {
-      opacity: 0.7;
+      color: #5cb988;
+
   }
 
   .fa-linkedin {
@@ -186,31 +241,51 @@ section p {
 #about h1{
     font-size: 500%;
     margin-top: 20%;
-    text-align: center;
- 
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 }
 
 #about p{
-    margin-left: 11%;
     text-align: left;
+    margin-left: 11%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 
 }
 
-#about h1 span:hover{
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-    text-shadow: 
-                          8px 8px #f3ed9b,
-                          20px 20px white;
-}
+#about h1 span{
+    position:relative;
+    z-index: -1;
+  }
+  #about h1 span:before{
+    content:"";
+    background-color:#fdd27b;
+    width:90%;
+    height:0.5em;
+    position:absolute;
+    z-index:-1;
+    filter:url(#marker-shape);
+    bottom:0.2em;
+    padding:0 0.25em;
+  }
+
 .skills{
     width: 30%;
-    margin-left: 10%;
     text-align: left;
-    margin-top: 20%;
     list-style: none;
-    display: block;
+    position: absolute;
+    margin-left: 60%;
+    margin-top: 10%;
+    z-index: -1;
+
 }
 .skills li{
     margin: 20px 0;
@@ -219,16 +294,15 @@ section p {
 .bar{
     background-color: black;
     display: block;
-    height: 2px;
+    height: 3px;
     border: 1px solid rgba(0,0,0,3);
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 0 10px #f3ed9b;
 }
 .bar span{
-    height: 2px;
+    height: 3px;
     float: left;
-    background: #f3ed9b;
+    background: #fdd27b;
 }
 .html.animate{
     width: 90%;
@@ -248,6 +322,13 @@ section p {
     width: 70%;
 }
 .javascript.animate{
+    width: 70%;
+    animation: baranimate 1s;
+}
+.react{
+    width: 70%;
+}
+.react.animate{
     width: 70%;
     animation: baranimate 1s;
 }
@@ -310,20 +391,87 @@ form .submit{
    
 }
 
+
 form .submit:hover{
-    background-color: black;
+    background-color: #5cb988;
+    opacity: 0.7;
     cursor: pointer;
     color: white ;
     text-decoration:none;
-    font-style: italic;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     
 }
 
+.moon{
+    width: 10%;
+    height: 100vh;
+    background: #63adf2;
+    opacity: 0.5;
+    position: absolute;
+    margin-left: 90%;
+    
+
+}
+.star{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background: #f39677;
+    border-radius: 0 0 400px 0;
+    -moz-border-radius: 0 0 400px 0;
+    -webkit-border-radius: 0 0 400px 0;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+}
+
+
+
 @media screen and (max-width: 768px){
 
+
+    .avatar {
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 20%;
+    
+    }
+    
+    .avatar img{
+        width:100px;
+        height: 100px;
+    }
+
+    button {
+        text-align: center;
+        background-color: #63adf2;
+        margin-top: 5%;
+        border-radius: 0.5rem;
+        width: 5rem;
+        height: 1.5rem;
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+        color: white;
+        border: transparent;
+    
+    }
+    .skills{
+        margin-top: 20%;
+    
+    }
+    .skills li{
+        margin: 5px 0;
+        
+    }
+    
     .scroll-down{
+        display: none;
+    }
+    .info{
         display: none;
     }
 
@@ -331,6 +479,7 @@ form .submit:hover{
         font-size: 270%;
         margin-top: 40%;
     }
+
   
     section h1 {
         font-size: 270%;
@@ -422,7 +571,7 @@ form .submit:hover{
 
     
     .nav-links:hover{
-        background-color:#f3ed9b;
+        background-color:#fdd27b;
     }
     .logo {
         width: 60px;
@@ -443,3 +592,4 @@ form .submit:hover{
     
     }
 }
+
