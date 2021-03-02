@@ -6,6 +6,7 @@ const navLi = document.querySelectorAll('nav .container ul li');
 const htmlSection = document.querySelector('.html');
 const cssSection = document.querySelector('.css');
 const jsSection = document.querySelector('.javascript');
+const reactSection = document.querySelector('.react');
 
 
 window.addEventListener('scroll',()=> {
@@ -19,12 +20,15 @@ window.addEventListener('scroll',()=> {
         htmlSection.classList.add("animate");
         cssSection.classList.add("animate");
         jsSection.classList.add("animate");
+        reactSection.classList.add("animate");
+
 
       }
       else{
         htmlSection.classList.remove("animate");
         cssSection.classList.remove("animate");
         jsSection.classList.remove("animate");
+        reactSection.classList.remove("animate");
 
 
       }
@@ -99,4 +103,3 @@ function ajax(method, url, data, success, error) {
   };
   xhr.send(data);
 }
-
