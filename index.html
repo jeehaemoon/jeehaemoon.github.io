@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="css/style.css"></link>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="icon" href="/images/favicon 4.00.21 PM.ico"/>  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <title>Jeehae Moon</title>
 </head>
 <body>
@@ -28,7 +27,10 @@
             </ul>
             
             <div class = "namelogo">
-                <img class="logo" src="images/LogoMakr-4cF3mJ.png">
+                <a href="#about">
+                    <img class="logo" src="images/LogoMakr-4cF3mJ.png" >
+                </a>
+                
             </div>
 
         
@@ -36,8 +38,13 @@
     </nav>
 
     <main>
-        <section id="about">
-            <h1>Hi! I'm <span>Jeehae</span> , Web Developer.</h1>
+        <section class="about" id="about">
+            <div class="moon"></div>
+            <div class="star"></div>
+
+  
+                
+            <h1> Hi! I'm <span>Jeehae</span> , Web Developer.</h1>
             <br>
             <br>
             <p>Based in Montreal, Canada,<br> I'm a mechanical enginnering graduate passionate for Front-End development.</p>
@@ -57,8 +64,19 @@
             </a>
         </section>
         <section id="resume">
+            <div class="avatar">
+                <img src="images/avataaars.png">
+                <br>
+                <a href="pdf/moon.pdf" download="moon_resume.pdf" class="button"><button type="button">Resume</button> </a>
+            </div>
+            <div class="info">
+                <h3>Name</h3>
+                <h4>Jeehae Moon</h4>
+                <br>
+                <h3>Education</h3>
+            </div>
+
             <div class="skills">
-                <h2>Skills</h2>
                 <li>
                     <h3>HTML</h3><span class="bar" ><span class = "html" ></span></span>
                 </li>
@@ -68,7 +86,18 @@
                 <li>
                     <h3>Javascript</h3><span class="bar"><span class = "javascript"></span></span>
                 </li>
+                <li>
+                    <h3>React</h3><span class="bar"><span class = "react"></span></span>
+
+                </li>
             </div>
+            <br>
+
+            <br>
+            <div class="experience">
+                
+            </div>
+
 
 
 
@@ -106,9 +135,17 @@
     <script src="js/main.js" charset="utf-8"></script>
 
 
+
    
 </body>
-
+<svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
+    <defs>
+      <filter id="marker-shape">
+        <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+    </defs>
+  </svg>
 
 </html>
 
