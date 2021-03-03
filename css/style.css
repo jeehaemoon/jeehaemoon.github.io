@@ -95,8 +95,40 @@ button {
     height: 50%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 2%;
-    border: 2px solid black;
+    margin-top: 5%;
+    justify-content: space-around;
+    display: flex;
+}
+
+
+.experience h3 {
+    opacity: 0.7;
+    font-size: 18px;
+
+}
+.experience h4{
+    opacity: 0.7;
+    font-size: 14px;
+}
+.education{
+    height: 100%;
+    width: 30%;
+    text-align: left;
+
+}
+
+.work{
+    height: 100%;
+    width: 30%;
+    text-align: left;
+    
+
+}
+
+.socials{
+    height: 100%;
+    width: 30%;
+    text-align: left;
 }
 .info{
     height: 30%;
@@ -108,10 +140,6 @@ button {
 
 }
 
-.info h3 {
-    text-align: left;
-    
-}
 
 @keyframes move-wheel{
     0%{
@@ -275,6 +303,7 @@ section p {
     filter:url(#marker-shape);
     bottom:0.2em;
     padding:0 0.25em;
+    opacity: 0.7;
   }
 
 .skills{
@@ -285,7 +314,6 @@ section p {
     margin-left: 60%;
     margin-top: 10%;
     z-index: -1;
-
 }
 .skills li{
     margin: 20px 0;
